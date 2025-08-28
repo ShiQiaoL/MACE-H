@@ -1,7 +1,6 @@
 # MACE-H
 
-This code is released as the MACE-H model in the paper *MACE-H: Equivariant Hamiltonian Prediction with Many-Body
-Message Passing*  ([arXiv:2210.13955](https://arxiv.org/abs/2210.13955)). 
+This code is released as the MACE-H model in the paper *Equivariant Electronic Hamiltonian Prediction with Many-Body Message Passing*  ([arXiv:2508.15108](https://arxiv.org/abs/2508.15108)). 
 
 This package is developed based upon [DeepH-E3](https://github.com/Xiaoxun-Gong/DeepH-E3), and share the similar workflow and mostly the same data management pipeline. If you have used DeepH-E3 before, MACE-H will be very easy to implement. 
 
@@ -67,6 +66,12 @@ The more detailed specification can be found in the example bash file in [Zendo]
 ## Citation
 
 ```
+@article{qian2025equivariant,
+  title={Equivariant Electronic Hamiltonian Prediction with Many-Body Message Passing},
+  author={Qian, Chen and Vitartas, Valdas and Kermode, James and Maurer, Reinhard J},
+  journal={arXiv preprint arXiv:2508.15108},
+  year={2025}
+}
 ```
 
 Since our packages are developed as extension of DeepH-E3, so we also suggest to cite the DeepH-E3 paper.
