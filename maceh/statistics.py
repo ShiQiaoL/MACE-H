@@ -56,7 +56,12 @@ def get_mean_std_tensor(dataset: AijData, net_out_irreps: o3.Irreps, kernel: e3T
 
     assert 'label' in dataset._data.keys(), "label is not found in the dataset"
 
-    net_out = kernel.get_net_out(dataset._data.label.to(kernel.device)).cpu()
+    # net_out = kernel.get_net_out(dataset._data.label.to(kernel.device)).cpu()
+    kernel_args = kernel.args
+    kernel_args['device_torch'] = 'cpu'
+    kernel_cpu = type(kernel)(**kernel_args)
+    net_out = kernel_cpu.get_net_out(dataset._data.label.cpu())
+    ### for larger memory on CPU 
 
     atomic_number_edge_i = dataset._data.x[dataset._data.edge_index[0]]
     atomic_number_edge_j = dataset._data.x[dataset._data.edge_index[1]]

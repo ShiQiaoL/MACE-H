@@ -194,6 +194,9 @@ class e3TensorDecomp:
         if net_irreps_out is not None:
             net_irreps_out = Irreps(net_irreps_out)
 
+        self.args = dict(net_irreps_out=net_irreps_out, out_js_list=out_js_list, default_dtype_torch=default_dtype_torch,
+            spinful=spinful, no_parity=no_parity, if_sort=if_sort, device_torch=device_torch)
+
         required_irreps_out = Irreps(None)
         in_slices = [0]
         wms = [] # wm = wigner_multiplier
